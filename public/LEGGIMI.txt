@@ -1,0 +1,38 @@
+MIOORARIO — VERSIONE PURAMENTE STATICA
+
+Carica tutti i file di questa cartella su un server statico, anche in una sottocartella.
+Apri index.html attraverso HTTP o HTTPS, non con un doppio clic.
+Non servono Node.js, database, dipendenze o compilazioni.
+Non sono presenti amministrazione, login, API o richieste a Google.
+Sono mantenuti lista e ricerca docenti, colori, orario personale, Adesso e swipe lun–ven.
+Questa copia non include manifest o service worker PWA, come il pacchetto statico OrarioLab.
+
+DATI
+orario.csv è la copia scaricata da Google Fogli il 12 novembre 2026.
+Per aggiornare i dati sostituiscilo con una nuova esportazione UTF-8 con separatore virgola.
+Mantieni 37 colonne: Docente, Colore e 7 ore per ciascuno dei cinque giorni.
+Le righe finali sono Settimana dispari, Settimana pari e Note.
+È accettata anche la variante Settiman pari. Note può essere omessa.
+Queste righe non compaiono tra i docenti e non modificano le loro lezioni.
+Le note riguardano il laboratorio e non sono visualizzate nell'orario personale.
+Come in OrarioLab, la settima colonna vuota nelle righe docenti e settimane determina un giorno di sei ore; Note non aggiunge ore.
+Non c'è il precedente limite di 20 docenti.
+
+ORARI
+Modifica config.json: csvFile, csvHasHeader, timeZone e days.
+starts contiene gli inizi delle ore, end la fine delle lezioni.
+Se sono configurati 7 inizi ma il CSV indica 6 ore, la sesta termina all'inizio della settima.
+Se il CSV passa a 7 ore, configura il settimo inizio e la nuova fine lezioni.
+Il CSV deve restare sullo stesso sito; i percorsi sono relativi e funzionano anche in sottocartelle.
+
+CACHE E AGGIORNAMENTI
+Come concordato per MioOrario, passare tra home e pagina docente riusa i dati nella sessione della scheda.
+Ricaricare manualmente una delle due pagine rilegge config.json e CSV con cache:no-store.
+La cache non ha scadenza temporale e termina con la sessione della scheda.
+Adesso cambia la selezione del giorno, senza rileggere il CSV.
+Un eventuale CDN deve essere configurato per non servire copie obsolete di CSV e JSON.
+
+PROVA LOCALE
+Dalla cartella: python -m http.server 8000
+Apri http://localhost:8000
+In alternativa usa IIS, Apache, Nginx o un hosting statico come Cloudflare.

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#153e35">
+  <title>MioOrario · Docenti</title>
+  <link rel="icon" href="./orario-lab-verde.png">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="timetable-page directory">
+  <header><a class="brand" href="./index.html"><img class="logo" src="./orario-lab-verde.png" alt="" width="200" height="182">Mio<span>Orario</span></a></header>
+  <main>
+    <div class="search directory-search" role="search">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg>
+      <input type="search" id="teacher-search" placeholder="Nome o cognome…" aria-label="Cerca docente" autocomplete="off">
+    </div>
+    <section class="schedule" aria-labelledby="directory-title">
+      <div class="day-heading"><h1 id="directory-title">Docenti</h1><span id="teacher-count">—</span></div>
+      <p id="status" role="status">Caricamento dell’elenco…</p>
+      <ul id="teacher-list" hidden></ul>
+      <p id="no-results" hidden>Nessun docente trovato.</p>
+    </section>
+  </main>
+  <script type="module" src="./js/home.js"></script>
+</body>
+</html>
