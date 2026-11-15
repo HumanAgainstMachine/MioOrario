@@ -4,8 +4,8 @@ Carica tutti i file di questa cartella su un server statico, anche in una sottoc
 Apri index.html attraverso HTTP o HTTPS, non con un doppio clic.
 Non servono Node.js, database, dipendenze o compilazioni.
 Non sono presenti amministrazione, login, API o richieste a Google.
-Sono mantenuti lista e ricerca docenti, colori, orario personale, Adesso e swipe lun–ven.
-Questa copia non include manifest o service worker PWA, come il pacchetto statico OrarioLab.
+Sono mantenuti lista e ricerca docenti, colori, orario personale, Oggi e swipe lun–ven.
+Questa copia include manifest e icone PWA. Richiede Internet: non include service worker o cache offline.
 
 DATI
 orario.csv è la copia scaricata da Google Fogli il 12 novembre 2026.
@@ -29,10 +29,18 @@ CACHE E AGGIORNAMENTI
 Come concordato per MioOrario, passare tra home e pagina docente riusa i dati nella sessione della scheda.
 Ricaricare manualmente una delle due pagine rilegge config.json e CSV con cache:no-store.
 La cache non ha scadenza temporale e termina con la sessione della scheda.
-Adesso cambia la selezione del giorno, senza rileggere il CSV.
+Oggi cambia la selezione del giorno, senza rileggere il CSV.
 Un eventuale CDN deve essere configurato per non servire copie obsolete di CSV e JSON.
 
 PROVA LOCALE
 Dalla cartella: python -m http.server 8000
 Apri http://localhost:8000
 In alternativa usa IIS, Apache, Nginx o un hosting statico come Cloudflare.
+
+PWA E MENU
+Vedi INSTALLAZIONE.txt. Menu disponibile in home e nella pagina docente: Installa MioOrario, Condividi con QR code, Logout Cloudflare Access.
+Il QR viene generato localmente con il dominio e la sottocartella da cui apri il sito.
+Sabato e domenica Oggi mostra solo “Seeeeee ... torna lunedì” al posto delle lezioni. Puoi selezionare i giorni o usare lo swipe per consultare gli orari; Oggi ripristina il messaggio.
+
+HEADER E LOGO
+Titolo e nome docente restano sulla stessa riga; il nome lungo è scorribile orizzontalmente. Header e barra giorni più alti e di uguale altezza, come in OrarioLab. Logo docente stilizzato e icone PWA aggiornati.

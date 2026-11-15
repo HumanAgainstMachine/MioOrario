@@ -34,12 +34,12 @@ function render(){
  const now = current();
  lastActive = `${now.d}:${now.h}`;
  $('#days').innerHTML = days.map((name,i)=>`<button data-day="${i}" class="${day===i?'active':''}" aria-pressed="${day===i}">${name.slice(0,3)}</button>`).join('');
- $('#day-title').textContent = days[day] || 'Laboratorio';
+ $('#day-title').textContent = days[day] || 'Fine settimana';
  if (!schedule) {
   $('#periods').textContent = loadError || 'Caricamento orario…';
   return;
  }
- if (day < 0) { $('#periods').innerHTML=''; return; }
+ if (day < 0) { $('#periods').innerHTML='<p class="weekend-message">Seeeeee ... torna lunedì</p>'; return; }
  const currentHour = day === now.d ? now.h : -1;
  $('#periods').innerHTML = schedule.bells[day].map((range,h)=>periodRow(h,range,currentHour)).join('');
 }
@@ -47,7 +47,7 @@ function render(){
 function goNow(){
  following = true;
  const weekday = current().d;
- day = weekday < 5 ? weekday : 0;
+ day = weekday < 5 ? weekday : -1;
  render();
 }
 function selectDay(nextDay){

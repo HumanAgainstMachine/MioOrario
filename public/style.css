@@ -121,3 +121,54 @@
 
 .directory .name { font-size:20px; line-height:1.35; }
 .directory .directory-search input { font-size:18px; }
+
+/* Header account menu. */
+.header-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.account-menu{position:relative}
+.account-menu summary{display:flex;align-items:center;justify-content:center;width:38px;height:38px;list-style:none;cursor:pointer;border:1px solid #dbe5cf;border-radius:10px;background:#edf2e6;color:#26483a}
+.account-menu summary::-webkit-details-marker{display:none}
+.account-menu nav{position:absolute;right:0;top:calc(100% + 8px);min-width:140px;padding:5px;background:#fff;border:1px solid #cbd7c8;border-radius:10px;box-shadow:0 6px 20px #173f3520;z-index:10}
+.account-menu a{display:block;padding:11px 14px;border-radius:6px;text-decoration:none;color:#203d35;font-size:16px}
+.account-menu a:hover{background:#edf2e6}
+@media(max-width:360px){.timetable-page header{gap:8px;padding-inline:10px}.timetable-page .brand{font-size:21px}.header-actions{gap:5px}.timetable-page #now.now-clock{padding-inline:10px}}
+
+.account-menu nav{min-width:205px}
+.account-menu nav button{display:block;width:100%;padding:11px 14px;border-radius:6px;text-align:left;color:#203d35;font-size:16px}
+.account-menu nav button:hover{background:#edf2e6}
+[hidden]{display:none!important}
+.app-dialog{width:min(420px,calc(100% - 28px));max-height:calc(100dvh - 40px);overflow:auto;padding:22px;border:1px solid #cbd7c8;border-radius:14px;background:#fff;color:#203d35;box-shadow:0 10px 40px #173f3530}
+.app-dialog::backdrop{background:#132e2566}
+.dialog-heading{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.dialog-heading h2{margin:0;font-size:21px}
+.dialog-heading button{font-size:28px;min-width:36px;min-height:36px}
+.app-dialog p,.app-dialog li{font-size:15px;line-height:1.5}
+.app-dialog ul{padding-left:20px}.app-dialog li+li{margin-top:10px}
+.share-qr{display:block;width:min(260px,100%);height:auto;margin:8px auto 18px}
+.app-dialog label{display:block;font-size:13px;margin-bottom:5px}
+#share-link{width:100%;padding:10px;border:1px solid #b4c5b3;border-radius:7px;font-size:13px;color:#203d35;background:#f4f8f0}
+.dialog-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.dialog-actions button{padding:10px 14px;border-radius:8px;background:#173f35;color:#fff}
+.app-dialog .dialog-note{font-size:12px;color:#526856}
+#share-status:empty{display:none}
+
+.account-menu{margin:0}.share-qr svg{display:block;width:100%;height:auto}.weekend-message{padding:48px 20px;text-align:center;font-size:22px;font-weight:650;color:#153e35}
+
+
+/* Single-row identity and equally sized top rows, as in OrarioLab. */
+.timetable-page .sticky-top{grid-auto-rows:auto;grid-template-rows:repeat(2,1fr)}
+.timetable-page .sticky-top header{flex-wrap:nowrap;min-height:64px;padding-block:8px;gap:4px}
+.teacher-path{white-space:nowrap;overflow-wrap:normal;overflow-x:auto;scrollbar-width:none;flex:1 1 0;min-width:0;margin:0;order:0}
+.teacher-path::-webkit-scrollbar{display:none}
+header .brand{flex-shrink:0;white-space:nowrap}
+.header-actions{margin-left:auto}
+.sticky-top .week-navigation{padding-block:12px}
+.week-navigation #days button{padding-block:10px;line-height:1.2;min-height:34px}
+@media(max-width:600px){
+ .timetable-page .sticky-top header{padding-inline:8px;min-height:64px}
+ .timetable-page .sticky-top .brand{font-size:21px;letter-spacing:-.6px}
+ .timetable-page .sticky-top header .logo{width:30px;height:30px;margin-right:5px}
+ .teacher-path{font-size:16px;line-height:1.4}
+ .header-actions{gap:4px}
+ .timetable-page #now.now-clock{font-size:16px;padding:7px 11px}
+ .account-menu summary{width:38px;height:38px}
+}

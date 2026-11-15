@@ -1,9 +1,21 @@
-<!doctype html><html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#153e35"><meta name="description" content="Le lezioni del docente, giorno per giorno."><title>MioOrario</title><link rel="icon" href="./orario-lab-verde.png"><link rel="stylesheet" href="./style.css"></head><body class="timetable-page">
-<div class="sticky-top"><header><a class="brand" href="./index.html" aria-label="MioOrario, pagina iniziale"><img class="logo" src="./orario-lab-verde.png" alt="" width="200" height="182">Mio<span>Orario</span></a><span class="teacher-path">/ <span id="teacher-name"></span></span><button id="now" class="now-clock" type="button" aria-label="Adesso, torna a oggi" title="Torna a oggi">Adesso</button></header>
+<!doctype html><html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#153e35"><meta name="description" content="Le lezioni del docente, giorno per giorno."><title>MioOrario</title><link rel="icon" href="./docente-logo.svg"><link rel="stylesheet" href="./style.css?v=header-4"><link rel="manifest" href="./manifest.webmanifest" crossorigin="use-credentials"><link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png?v=3"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="MioOrario"><meta name="apple-mobile-web-app-status-bar-style" content="default"></head><body class="timetable-page">
+<div class="sticky-top"><header><a class="brand" href="./index.html" aria-label="MioOrario, pagina iniziale"><img class="logo" src="./docente-logo.svg" alt="" width="128" height="128">Mio<span>Orario</span></a><span class="teacher-path" tabindex="0" aria-label="Nome docente, scorribile se lungo">/ <span id="teacher-name"></span></span><div class="header-actions"><button id="now" class="now-clock" type="button" aria-label="Oggi, torna a oggi" title="Torna a oggi">Oggi</button><details class="account-menu"><summary aria-label="Menu" title="Menu"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></summary><nav aria-label="Menu"><button id="install-app" type="button">Installa MioOrario</button><button id="share-app" type="button">Condividi</button><a href="/cdn-cgi/access/logout">Logout</a></nav></details></div></header>
 <div class="week-navigation"><nav id="days" aria-label="Giorno della settimana"></nav></div></div><main>
 <section class="schedule daily" tabindex="0" aria-labelledby="day-title">
 <span id="day-title" hidden></span>
 <div id="periods">Caricamento orario…</div>
 </section>
 <footer><span>Docenti ITCG Matera</span><span>&lt;- Swipeable -&gt;</span></footer></main>
-<script type="module" src="./app.js"></script></body></html>
+<script type="module" src="./app.js"></script><dialog id="install-dialog" class="app-dialog" aria-labelledby="install-title">
+<div class="dialog-heading"><h2 id="install-title">Installa MioOrario</h2><button type="button" data-close aria-label="Chiudi">×</button></div>
+<p>Se il browser non propone l’installazione, usa il suo menu:</p>
+<ul><li><strong>Android:</strong> in Chrome, scegli “Installa app” o “Aggiungi a schermata Home”.</li><li><strong>iPhone:</strong> in Safari, tocca Condividi → Aggiungi alla schermata Home.</li><li><strong>PC:</strong> in Edge o Chrome, usa l’icona di installazione nella barra degli indirizzi o il menu del browser.</li></ul>
+<p>Se MioOrario è già installata, aprila dalla sua icona.</p></dialog>
+<dialog id="share-dialog" class="app-dialog" aria-labelledby="share-title">
+<div class="dialog-heading"><h2 id="share-title">Condividi MioOrario</h2><button type="button" data-close aria-label="Chiudi">×</button></div>
+<p>Scansiona il QR code per aprire MioOrario.</p>
+<div id="share-qr" class="share-qr" role="img" aria-label="QR code del sito MioOrario"></div>
+<label for="share-link">Link del sito</label><input id="share-link" readonly value="">
+<div class="dialog-actions"><button id="copy-link" type="button">Copia link</button><button id="native-share" type="button" hidden>Condividi…</button></div>
+<p id="share-status" role="status" aria-live="polite"></p><p class="dialog-note">L’accesso resta riservato agli account autorizzati.</p></dialog>
+<script src="./vendor/qrcode.js"></script><script src="./pwa.js"></script></body></html>
