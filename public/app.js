@@ -1,4 +1,4 @@
-import {loadTimetable} from './js/timetable-cache.js';
+import {loadTimetable} from './js/timetable-cache.js?v=footer-1';
 const $=s=>document.querySelector(s),days=['Lunedì','Martedì','Mercoledì','Giovedì','Venerdì'];
 let schedule=null, day=0, following=true, loadError='', lastActive='';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -77,6 +77,7 @@ async function refresh(){
   if (!data.teachers.some(t => t.name === selectedName)) throw Error('Docente non trovato.');
   document.title = selectedName + ' · MioOrario';
   schedule = data;
+  $('#footer-text').textContent = data.footerText;
  } catch(error) {
   loadError = error.message;
  }

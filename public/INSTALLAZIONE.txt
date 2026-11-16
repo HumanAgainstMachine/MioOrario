@@ -41,3 +41,7 @@ In Edge/Chrome il manifest è controllabile negli strumenti sviluppatore, Applic
 MENU NELL’APP
 Installa MioOrario apre la richiesta nativa quando il browser la rende disponibile; altrimenti mostra le istruzioni per Android, iPhone e PC. La voce è nascosta quando l’app è aperta in modalità standalone.
 Condividi mostra il QR code e il link da copiare. Il pulsante Condividi… usa il pannello del dispositivo quando supportato. Il QR e il link non concedono autorizzazioni di accesso.
+
+ICONA MO — VERSIONE 5
+Monogramma MO con O a orologio. Varianti any circolari trasparenti e maskable quadrate a fondo pieno, come OrarioLab v5. Manifest con ?v=5 e nuovi nomi dei file icona.
+Dopo il deploy, se il telefono mostra ancora la vecchia icona, disinstalla MioOrario, riapri il sito in Chrome e reinstallala. La forma finale dipende dal launcher: su LineageOS usa la stessa impostazione per icone tonde provata con OrarioLab.

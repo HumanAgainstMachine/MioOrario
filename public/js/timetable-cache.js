@@ -1,6 +1,6 @@
 import {decodeCSV} from './timetable.js';
 const configURL=new URL('../config.json',import.meta.url);
-const CACHE_KEY='mioorario:static:v1:'+configURL.href;
+const CACHE_KEY='mioorario:static:v2:'+configURL.href;
 function mins(v){const [h,m]=v.split(':').map(Number);return h*60+m}
 export async function loadTimetable(){
  if(performance.getEntriesByType('navigation')[0]?.type!=='reload'){
@@ -29,6 +29,7 @@ export async function loadTimetable(){
   });
 
  data.timeZone=zone;
+ data.footerText=typeof config.footerText==='string'?config.footerText:'Docenti';
  try{sessionStorage.setItem(CACHE_KEY,JSON.stringify(data));}catch{}
  return data;
 }

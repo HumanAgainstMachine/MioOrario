@@ -44,3 +44,6 @@ Sabato e domenica Oggi mostra solo “Seeeeee ... torna lunedì” al posto dell
 
 HEADER E LOGO
 Titolo e nome docente restano sulla stessa riga; il nome lungo è scorribile orizzontalmente. Header e barra giorni più alti e di uguale altezza, come in OrarioLab. Logo docente stilizzato e icone PWA aggiornati.
+
+TESTO DEL FOOTER
+Modifica footerText in config.json, per esempio "footerText": "Docenti Istituto Verdi". Una stringa vuota nasconde il testo; se il campo manca viene mostrato "Docenti". Ricarica la pagina dopo la modifica: il testo segue la stessa cache di sessione degli orari. Non occorre modificare HTML o JavaScript.

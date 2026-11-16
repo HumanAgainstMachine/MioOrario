@@ -29,7 +29,7 @@
  const nativeShare=document.querySelector('#native-share');
  nativeShare.hidden=typeof navigator.share!=='function';
  nativeShare.addEventListener('click',async()=>{
-  try {await navigator.share({title:'MioOrario',text:'Orario dei docenti ITCG Matera',url});}
+  try {await navigator.share({title:'MioOrario',text:'Orario personale dei docenti',url});}
   catch(error){if(error.name!=='AbortError')status.textContent='Condivisione non disponibile: puoi copiare il link.';}
  });
  document.querySelector('#copy-link').addEventListener('click',async()=>{

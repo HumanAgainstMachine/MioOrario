@@ -1,5 +1,5 @@
 import {normalized, initials, contrastColor} from './data.js';
-import {loadTimetable} from './timetable-cache.js';
+import {loadTimetable} from './timetable-cache.js?v=footer-1';
 const search = document.getElementById('teacher-search');
 const list = document.getElementById('teacher-list');
 const count = document.getElementById('teacher-count');
