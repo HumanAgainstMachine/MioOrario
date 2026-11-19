@@ -1,4 +1,4 @@
-const FALLBACK_COLOR='#286a81';
+const FALLBACK_COLOR='#285b91';
 function normalized(value) {
   return String(value ?? '').trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('it');
 }

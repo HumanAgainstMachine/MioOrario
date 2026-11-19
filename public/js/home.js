@@ -1,4 +1,4 @@
-import {normalized, initials, contrastColor} from './data.js';
+import {normalized, initials, contrastColor} from './data.js?v=blue-6';
 import {loadTimetable} from './timetable-cache.js?v=footer-1';
 const search = document.getElementById('teacher-search');
 const list = document.getElementById('teacher-list');
@@ -23,8 +23,8 @@ function render() {
     const avatar = document.createElement('span');
     avatar.className = 'avatar';
     avatar.textContent = initials(teacher.name);
-    avatar.style.backgroundColor = teacher.color || "#dbeae2";
-    avatar.style.color = contrastColor(teacher.color || "#dbeae2");
+    avatar.style.backgroundColor = teacher.color || "#dce8f8";
+    avatar.style.color = contrastColor(teacher.color || "#dce8f8");
     avatar.setAttribute('aria-hidden', 'true');
     const title = document.createElement('span');
     title.className = 'name';

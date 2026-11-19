@@ -43,7 +43,10 @@ Il QR viene generato localmente con il dominio e la sottocartella da cui apri il
 Sabato e domenica Oggi mostra solo “Seeeeee ... torna lunedì” al posto delle lezioni. Puoi selezionare i giorni o usare lo swipe per consultare gli orari; Oggi ripristina il messaggio.
 
 HEADER E LOGO
-Titolo e nome docente restano sulla stessa riga; il nome lungo è scorribile orizzontalmente. Header e barra giorni più alti e di uguale altezza, come in OrarioLab. Logo docente stilizzato e icone PWA aggiornati.
+Titolo e nome docente restano sulla stessa riga; il nome lungo è scorribile orizzontalmente. Header e barra giorni più alti e di uguale altezza, come in OrarioLab. Logo MO e icone PWA in blu, con O a orologio.
+
+PALETTE
+La palette dell’interfaccia è blu, comprese tutte le tonalità di sfondi, testi, bordi, pulsanti e selezioni. Restano invariati i colori propri dei docenti definiti nel CSV, il giallo di Potenziamento e i colori degli errori.
 
 TESTO DEL FOOTER
 Modifica footerText in config.json, per esempio "footerText": "Docenti Istituto Verdi". Una stringa vuota nasconde il testo; se il campo manca viene mostrato "Docenti". Ricarica la pagina dopo la modifica: il testo segue la stessa cache di sessione degli orari. Non occorre modificare HTML o JavaScript.
